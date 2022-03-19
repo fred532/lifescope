@@ -7,9 +7,10 @@
 
         <link rel="icon" type="image/svg+xml" href="./static/favicon.svg" />
 
-        <link rel="stylesheet" href="./app.css?{{ timestamp }}" />
-
-        <script src="./js/app.js?{{ timestamp }}"></script>
+        <link rel="stylesheet" href="./css/style.css?{{ timestamp }}" />
+        
+        <script src="/js/slider.js?{{ timestamp }}"></script>
+        
         <title>
             {% if title %}{{ title }} - {% endif %}{{
                 config.labels.project_title
@@ -23,56 +24,11 @@
             <a href="index.html">
                 <h3>{{ config.labels.project_title }}</h3>
             </a>
-
-            <input
-                type="search"
-                name="search"
-                placeholder="{{ config.labels.search }}"
-            />
         </header>
 
         <div class="row">
             <div class="column-1">
                 <div class="content">{{ content }}</div>
-
-                <div class="metadata">
-                    {% if metadata %} {% for cat, data in metadata %} {% if
-                    config.metadata[cat] == undefined or
-                    config.metadata[cat].display_on_page %}
-                    <div class="tag-container">
-                        <h3>
-                            {% if config.metadata[cat].label %}
-                            {{ config.metadata[cat].label }}
-                            {% else %}
-                            {{ cat }}
-                            {% endif %}
-                        </h3>
-                        {% for item in data %}
-                        <a href="{{ item.link }}" class="tag">{{
-                            item.title
-                        }}</a>
-                        {% endfor %}
-                    </div>
-                    {% endif %} {% endfor %} {% endif %}
-                </div>
-
-                <div class="links">
-                    {% if links %}
-                    <h3>{{ config.labels.see_also }}</h3>
-                    <ul>
-                        {% for link in links %}
-                        <li>
-                            <a href="{{ link.cat }}-{{ link.slug }}.html">{{
-                                link.title
-                            }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-            </div>
-            <div class="column-2">
-                <div id="graph-container" data-node="{{ id }}"></div>
             </div>
         </div>
     </body>

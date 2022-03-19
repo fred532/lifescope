@@ -1,4 +1,12 @@
 module.exports = {
+    customStylesheetURL: null,
+	yearLength: 120,
+	hideAge: false,
+	typesList: [
+        "life.md",
+        "computers.md"
+    ],
+
     base_url: "https://github.com/Greaby/telescope/",
     language: "en",
 
