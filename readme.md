@@ -1,27 +1,24 @@
-# Telescope
+# Lifescope
 
 <p>
-    <a href="https://github.com/Greaby/telescope/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/greaby/telescope?color=D94D4C" />
-    </a>
-    <a href="https://github.com/Greaby/telescope/pulls">
-      <img alt="Pull requests" src="https://img.shields.io/github/issues-pr/greaby/telescope?color=ECA539" />
-    </a>
+
 </p>
 
-Telescope allows you to create a collaborative documentation that will be generated as a static site with an interactive graph to explore the content.
+Try to merge life with telescope
 
 ## How to install
-
-The project require Node.js 16+
 
 1. Clone this repository
 2. Install the dependencies using the command `npm install`
 
-## Documentation
+## Build
 
-The documentation is available [here](https://greaby.github.io/telescope/)
+`npm run build`
 
-## Sample projects using Telescope
+The generated files will be in [dist] folder
 
--   [Galaxie GD](https://greaby.github.io/galaxie-gd/)
+## Serve
+
+`npm run start`
+
+Starts the express server localy.
